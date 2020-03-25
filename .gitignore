@@ -4,19 +4,19 @@
 .classpath
 .project
 .settings/
-
+ 
 # Intellij
 .idea/
 *.iml
 *.iws
-
+ 
 # Mac
 .DS_Store
-
+ 
 # Maven
 log/
 target/
-bin/
+bin/	
 .mvn/
 .springBeans
 \.factorypath
