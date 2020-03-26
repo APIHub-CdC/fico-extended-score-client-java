@@ -4,7 +4,6 @@ import java.util.Objects;
 import com.google.gson.annotations.SerializedName;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.FicoEXTScored.client.model.CatalogoRazones;
 import java.util.ArrayList;
 import java.util.List;
 @ApiModel(description = "Contiene los elementos Score.")
@@ -16,7 +15,8 @@ public class Score {
   @SerializedName("valor")
   private Integer valor = null;
   @SerializedName("razones")
-  private List<CatalogoRazones> razones = null;
+  //private List<CatalogoRazones> razones = null;
+  private List<String> razones = null;
   public Score nombreScore(String nombreScore) {
     this.nombreScore = nombreScore;
     return this;
@@ -41,23 +41,23 @@ public class Score {
   public void setValor(Integer valor) {
     this.valor = valor;
   }
-  public Score razones(List<CatalogoRazones> razones) {
+  public Score razones(List<String> razones) {
     this.razones = razones;
     return this;
   }
-  public Score addRazonesItem(CatalogoRazones razonesItem) {
+  public Score addRazonesItem(String razonesItem) {
     if (this.razones == null) {
-      this.razones = new ArrayList<CatalogoRazones>();
+      this.razones = new ArrayList<String>();
     }
     this.razones.add(razonesItem);
     return this;
   }
    
   @ApiModelProperty(example = "[\"D8\",\"E4\",\"K0\",\"D2\"]", value = "")
-  public List<CatalogoRazones> getRazones() {
+  public List<String> getRazones() {
     return razones;
   }
-  public void setRazones(List<CatalogoRazones> razones) {
+  public void setRazones(List<String> razones) {
     this.razones = razones;
   }
   @Override
